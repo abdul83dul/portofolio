@@ -228,25 +228,15 @@ section{
 
     border:5px solid rgba(255,255,255,.15);
 
-    box-shadow:
-    0 0 60px rgba(56,189,248,.4);
+    box-shadow:0 0 60px rgba(56,189,248,.4);
 
     animation:floating 4s ease-in-out infinite;
 }
 
 @keyframes floating{
-
-    0%{
-        transform:translateY(0);
-    }
-
-    50%{
-        transform:translateY(-20px);
-    }
-
-    100%{
-        transform:translateY(0);
-    }
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-20px);}
+    100%{transform:translateY(0);}
 }
 
 /* =========================
@@ -262,12 +252,9 @@ section{
 .stat-card{
     background:var(--card);
     border:1px solid var(--border);
-
     backdrop-filter:blur(20px);
-
     border-radius:25px;
     padding:40px;
-
     text-align:center;
 }
 
@@ -285,9 +272,7 @@ section{
 .project-card{
     background:var(--card);
     border:1px solid var(--border);
-
     backdrop-filter:blur(20px);
-
     border-radius:25px;
 }
 
@@ -321,7 +306,6 @@ section{
     width:100%;
     height:10px;
     margin-top:15px;
-
     background:#334155;
     border-radius:20px;
 }
@@ -330,12 +314,7 @@ section{
     display:block;
     height:100%;
     border-radius:20px;
-
-    background:linear-gradient(
-        90deg,
-        #38bdf8,
-        #8b5cf6
-    );
+    background:linear-gradient(90deg,#38bdf8,#8b5cf6);
 }
 
 /* =========================
@@ -379,24 +358,18 @@ section{
 form{
     max-width:700px;
     margin:auto;
-
     display:flex;
     flex-direction:column;
     gap:20px;
 }
 
-input,
-textarea{
+input,textarea{
     padding:18px;
-
     border:none;
     outline:none;
-
     border-radius:15px;
-
     background:var(--card);
     border:1px solid var(--border);
-
     color:white;
 }
 
@@ -404,12 +377,9 @@ button{
     padding:18px;
     border:none;
     border-radius:15px;
-
     background:var(--primary);
-
     font-size:1rem;
     font-weight:600;
-
     cursor:pointer;
 }
 
@@ -440,15 +410,11 @@ footer p{
 .footer-social a{
     width:45px;
     height:45px;
-
     border-radius:50%;
-
     background:var(--card);
-
     display:flex;
     justify-content:center;
     align-items:center;
-
     color:white;
     text-decoration:none;
 }
@@ -463,22 +429,15 @@ footer p{
 
 #topBtn{
     position:fixed;
-
     right:25px;
     bottom:25px;
-
     width:55px;
     height:55px;
-
     border:none;
     border-radius:50%;
-
     background:var(--primary);
-
     display:none;
-
     cursor:pointer;
-
     z-index:999;
 }
 
@@ -498,7 +457,7 @@ footer p{
 }
 
 /* =========================
-   MOBILE
+   MOBILE FIX (PENTING)
 ========================= */
 
 @media(max-width:768px){
@@ -511,17 +470,11 @@ footer p{
         position:absolute;
         top:80px;
         right:-100%;
-
         width:250px;
-
         flex-direction:column;
-
         background:#1e293b;
-
         padding:30px;
-
         border-radius:20px;
-
         transition:.4s;
     }
 
@@ -532,10 +485,12 @@ footer p{
     .hero{
         grid-template-columns:1fr;
         text-align:center;
+        gap:30px;
     }
 
-    .hero h1{
-        font-size:3rem;
+    /* 🔥 FIX UTAMA: GAMBAR DI ATAS */
+    .hero-image{
+        order:-1;
     }
 
     .hero-image img{
@@ -543,9 +498,13 @@ footer p{
         height:260px;
     }
 
+    .hero h1{
+        font-size:3rem;
+    }
+
     .hero-btn .btn{
         display:block;
-        margin:10px 0;
+        margin:10px auto;
     }
 
     .socials{
